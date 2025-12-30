@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-permission android:name="android.permission.VIBRATE" />
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.FitMyself">
+        <activity
+            android:name=".MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SetupActivity" />
+        <activity android:name=".TrainingDashboardActivity" />
+        <activity
+            android:name=".ArrangeCycleActivity"
+            android:label="安排循环顺序"
+            android:parentActivityName=".SetupActivity">
+        </activity>
+        <activity android:name=".SelectExercisesActivity" android:label="选择动作" />
+        <activity android:name=".TrainingActivity" android:label="训练中"/>
+        <activity android:name=".HistoryActivity" android:label="训练日志"/>
+
+
+    </application>
+
+</manifest>
