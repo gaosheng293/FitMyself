@@ -22,7 +22,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".SetupActivity" />
-        <activity android:name=".TrainingDashboardActivity" />
+        <activity
+            android:name=".TrainingDashboardActivity"
+            android:exported="true"
+            android:configChanges="orientation|screenSize|keyboardHidden|screenLayout">
+        </activity>
         <activity
             android:name=".ArrangeCycleActivity"
             android:label="安排循环顺序"
